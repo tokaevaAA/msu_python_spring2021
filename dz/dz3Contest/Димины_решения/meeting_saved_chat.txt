@@ -1,0 +1,61 @@
+19:42:45	 От Дмитрий Оганесян : def printtree(koren, offset):
+    for i in range(offset):
+        print("-----;",end='');
+    if (koren==0):
+        print('*')
+        return
+
+    print(chr(koren.my_int))
+
+    printtree(koren.mas_of_children[3],offset+1)
+    printtree(koren.mas_of_children[2],offset+1)
+    printtree(koren.mas_of_children[1],offset+1)
+    printtree(koren.mas_of_children[0],offset+1)
+20:04:58	 От Дмитрий Оганесян : def __next__(self)
+
+20:06:40	 От Дмитрий Оганесян : def __iter__(self):
+20:06:43	 От Дмитрий Оганесян : return self
+20:07:17	 От Дмитрий Оганесян : def __init__(self, Tree):
+20:09:05	 От Дмитрий Оганесян : class Tree
+20:09:12	 От Дмитрий Оганесян : class TreeItreator
+20:09:45	 От Дмитрий Оганесян : def iter(self):
+    return TreeIterator(self)
+20:11:50	 От Дмитрий Оганесян : class TreeIterator:
+    def __init__(self, tree):
+        pass
+    
+    def __next__(self):
+        pass
+20:22:38	 От Дмитрий Оганесян :         if self.father == 0:
+            return ''
+        return self.father.getpref() + chr(self.my_int)
+20:24:08	 От Дмитрий Оганесян :     def __init__(self, tree):
+        self.list = [tree.root]
+20:28:31	 От Дмитрий Оганесян :         current = self.list[0]
+        curr = self.list.pop(0)
+        for child in curr.mas_of_children:
+            if child != 0
+                self.list.append(child)
+        return child.getpref()
+20:32:15	 От 409 Токаева Александра : it=TreeIterator(tree1)
+for el in it:
+    print(el)
+20:58:53	 От Дмитрий Оганесян : def __next__():
+21:47:18	 От Дмитрий Оганесян :     def __iter__(self):
+        return self
+    
+21:47:27	 От 409 Токаева Александра : trie = Tree()
+
+trie.add('word')
+trie.add('world')
+trie.add('work')
+trie.add('wood')
+
+prefix = trie.starts_with('wor')
+print(*prefix, sep='\n')
+21:49:04	 От 409 Токаева Александра : print(isinstance(prefix, TrieIterator))
+21:52:54	 От 409 Токаева Александра : Нужно было реализовать метод __contains__. Если ваш объект поддерживает механизм итерации (__iter__, __next__), то поиск элемента тоже будет работать: внутри запустится цикл на поиск нужного элемента – что в общем случае неэффективно.
+21:53:24	 От Дмитрий Оганесян : word in tree
+21:53:56	 От Дмитрий Оганесян : 5 in range(10)
+21:55:30	 От Дмитрий Оганесян : __contains__
+21:55:36	 От Дмитрий Оганесян : __add__
